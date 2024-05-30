@@ -37,7 +37,7 @@ function Board() {
   }
 
   const setSquareValue = (i) => {
-    setStep((step)=>step+1);
+
     if(isWinner) {
       window.location.reload();
       return;
@@ -47,6 +47,7 @@ function Board() {
     newSquares[i] = (isNextX) ? 'x' : 'o';
     setIsNextX(!isNextX);
     setSquares(newSquares);
+    setStep((step)=>step+1);
   }
 
   winner = checkWinner();
